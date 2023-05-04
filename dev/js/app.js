@@ -1,3 +1,4 @@
 window.onload = () => {
-    // Add your code below
+    window.prompt();
+    // Add your code below]
 };
