@@ -58,6 +58,7 @@ while(x1<=stoppingpointforrow){
     y1++;
     y2--;
 
+    //if we get to the end of the row
     if(y1==stoppingpointforcellinrow){
         //goes to the next row and resets to start at the first cell of that row
         x1++;
@@ -78,11 +79,20 @@ if(x1==stoppingpointforcellinrow&&y1==stoppingpointforcellinrow||stoppingpointfo
 
 }
 
-
 }
 
 swap(input-input,input-input,input-1,input-1,flippedtable);
 
+function highlightdiagonal(x1,y1){
+    while(x1<=input-1){
+        originaltable.rows[x1].cells[y1].style.backgroundColor=`yellow`;
+        flippedtable.rows[x1].cells[y1].style.backgroundColor=`yellow`;
+        x1++;
+        y1--;
+    }
+
+}
+highlightdiagonal(input-input,input-1);
 document.body.appendChild(originaltable);
 document.body.appendChild(flippedtable);
 
